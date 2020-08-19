@@ -1,15 +1,13 @@
 <template>
   <div class="stacks">
     <div
-      id="stack-card"
       v-for="stack in stackList"
+      id="stack-card"
       :key="stack.id"
       :class="stack.class"
     >
-      <img :alt="stack.name" :src="'.././assets/stack/' + stack.svg" />
+      <img :alt="stack.name" :src="require('.././assets/stack/' + stack.svg)" />
       <p>{{ stack.name }}</p>
-      <!-- test to check if source directory is correct -->
-      <img src=".././assets/stack/html5-brands.svg" alt="" />
     </div>
   </div>
 </template>
@@ -86,30 +84,21 @@
   .stacks {
     display: flex;
     flex-wrap: wrap;
-
     margin-top: 1rem;
-
     width: 100%;
-
     justify-content: center;
   }
 
   #stack-card {
     display: flex;
     flex-direction: column;
-
     width: 100px;
-
     justify-content: center;
     align-items: center;
-
     height: 175px;
-
     padding: 0.75rem 1rem;
     margin: 0.75rem;
-
     border-radius: 15px;
-
     background-image: radial-gradient(
       rgba(236, 255, 255, 0),
       rgba(236, 255, 255, 0.9)
@@ -128,11 +117,9 @@
     0% {
       transform: translateY(10px);
     }
-
     50% {
       transform: translateY(-10px);
     }
-
     100% {
       transform: translateY(10px);
     }
@@ -146,11 +133,9 @@
     0% {
       transform: translateY(-10px);
     }
-
     50% {
       transform: translateY(10px);
     }
-
     100% {
       transform: translateY(-10px);
     }

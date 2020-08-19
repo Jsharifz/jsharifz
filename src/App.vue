@@ -17,14 +17,14 @@
 </template>
 
 <script>
-  import Hero from "./components/Hero.vue";
-  import Stacks from "./components/Stacks";
-  import Projects from "./components/Projects";
-  import Contact from "./components/Contact";
-  import Footer from "./components/Footer";
+  import Hero from './components/Hero.vue';
+  import Stacks from './components/Stacks';
+  import Projects from './components/Projects';
+  import Contact from './components/Contact';
+  import Footer from './components/Footer';
 
   export default {
-    name: "App",
+    name: 'App',
     components: {
       Hero,
       Stacks,
@@ -35,15 +35,15 @@
     data() {
       return {
         scrollValue: 0,
-        displayToTop: "",
+        displayToTop: '',
       };
     },
     created() {
       document.onscroll = this.updateScrollValue;
       this.displayToTop = {
         opacity: `0%`,
-        "margin-bottom": `400px`,
-        "pointer-events": "none",
+        'margin-bottom': `400px`,
+        'pointer-events': 'none',
       };
     },
     methods: {
@@ -51,14 +51,14 @@
         if (this.scrollValue >= 250) {
           this.displayToTop = {
             opacity: `100%`,
-            "margin-bottom": `2rem`,
-            "pointer-events": "auto",
+            'margin-bottom': `2rem`,
+            'pointer-events': 'auto',
           };
         } else {
           this.displayToTop = {
             opacity: `0%`,
-            "margin-bottom": `400px`,
-            "pointer-events": "none",
+            'margin-bottom': `400px`,
+            'pointer-events': 'none',
           };
         }
         this.scrollValue = window.scrollY;

@@ -4,70 +4,93 @@
       <a :href="project.deployment" target="blank">
         <h3>{{ project.title }}</h3>
       </a>
-      <p>{{ project.descrption }}</p>
-      <a :href="project.repo" target="blank">
-        <h3>Repository</h3>
+      <a :href="project.deployment" target="blank" class="preview">
+        <img
+          :alt="project.title"
+          :src="require('.././assets/projects/' + project.img)"
+        />
       </a>
+      <p>{{ project.descrption }}</p>
+
+      <p>
+        <strong><a :href="project.repo" target="blank">Repository</a></strong>
+      </p>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "Projects",
+    name: 'Projects',
     data() {
       return {
         projectList: [
           {
-            title: `JavaScript API App`,
-            descrption: "Description",
+            title: 'JavaScript API App',
+            descrption:
+              'API fetch and event listener menu bar utilizing JavaScript. API currently unsopported.',
             deployment:
-              "https://jsharifz.github.io/JavaScript-Assignments/js-assignment3/index.html",
-            repo: `https://github.com/Jsharifz/JavaScript-Assignments/tree/master/js-assignment3`,
+              'https://jsharifz.github.io/JavaScript-Assignments/js-assignment3/index.html',
+            repo:
+              'https://github.com/Jsharifz/JavaScript-Assignments/tree/master/js-assignment3',
+            img: 'jsapi.png',
           },
           {
-            title: `Sass Wireframe Project`,
-            descrption: "Description",
+            title: 'Sass Wireframe Project',
+            descrption:
+              'Collaborated with my group to generate a Sass wireframe of a news site utilizing GitHub Projects.',
             deployment:
-              "https://jsharifz.github.io/projects/project%203/home.html",
-            repo: `https://github.com/Vaddeil/sass-group-assignment`,
+              'https://jsharifz.github.io/projects/project%203/home.html',
+            repo: 'https://github.com/Vaddeil/sass-group-assignment',
+            img: 'sass.png',
           },
           {
-            title: `WordPress Website Redesign: APCSE`,
-            descrption: "Description",
-            deployment: "https://apcse.com/",
-            repo: `https://apcse.com/`,
+            title: 'WordPress Website Redesign: APCSE',
+            descrption:
+              'WordPress site originally published by APCSE in 2016 redone with the intent to fix typos, adjust post settings, keep it responsive, and overall simplify modernize the look with popular tools Elementor and Astra themes.',
+            deployment: 'https://apcse.com/',
+            repo: 'https://apcse.com/',
+            img: 'apcsewordpress.png',
           },
           {
-            title: `Express EJS3 Gallery`,
-            descrption: "Description",
-            deployment: "https://javad-node-assignment-3.herokuapp.com/",
-            repo: `https://github.com/Jsharifz/Node-Assignment-3`,
+            title: 'Express EJS3 Gallery',
+            descrption:
+              'Generated an image gallery that utilizes data base values retrieved managed with MongoDB; individual gallery images can be clicked to display larger resolution of the image.',
+            deployment: 'https://javad-node-assignment-3.herokuapp.com/',
+            repo: 'https://github.com/Jsharifz/Node-Assignment-3',
+            img: 'gallery.png',
           },
           {
-            title: `Vue.js Website Redesign: Homa Health Care Services`,
-            descrption: "Description",
-            deployment:
-              "http://https://homa-health-care-services.herokuapp.com",
-            repo: `https://github.com/Jsharifz/homa-health-care-services`,
+            title: 'Vue.js Website Redesign: Homa Health Care Services',
+            descrption:
+              'Redesigned website that was originally built with basic page builder. Fixed issues regarding content management, styling limitations, visual appeal, responsiveness, and implemented anti-spam into contact form.',
+            deployment: 'https://homa-health-care-services.herokuapp.com/',
+            repo: 'https://github.com/Jsharifz/homa-health-care-services',
+            img: 'homa.png',
           },
           {
-            title: `CSS Digital Watch`,
-            descrption: "Description",
-            deployment: "https://jsharifz.github.io/Bulova-Watch/",
-            repo: `https://github.com/Jsharifz/Bulova-Watch`,
+            title: 'CSS Digital Watch',
+            descrption:
+              'Bulova Archive Series Digital LED Computron recreated (in Gold, Steel, and Black) using CSS and Moment package for the clock. The page is best experienced in the FireFox browser.',
+            deployment: 'https://jsharifz.github.io/Bulova-Watch/',
+            repo: 'https://github.com/Jsharifz/Bulova-Watch',
+            img: 'watch.png',
           },
           {
-            title: `JavaScript Mini App`,
-            descrption: "Description",
-            deployment: "https://jsharifz.github.io/Pi-Estimator/",
-            repo: `https://github.com/Jsharifz/Pi-Estimator`,
+            title: 'JavaScript Mini App',
+            descrption:
+              'This app was produced as a learning opportunity to understand and become familiar with the JavaScript and DOM manipulation.',
+            deployment: 'https://jsharifz.github.io/Pi-Estimator/',
+            repo: 'https://github.com/Jsharifz/Pi-Estimator',
+            img: 'jspi.png',
           },
           {
-            title: `Vue.js Mini App`,
-            descrption: "Description",
-            deployment: "https://jsharifz.github.io/Pi-Estimator-Vue/",
-            repo: `https://github.com/Jsharifz/Pi-Estimator-Vue`,
+            title: 'Vue.js Mini App',
+            descrption:
+              'This app was produced as a learning opportunity to understand and become familiar with the Vue.js framework. Its purpose is to demonstrate event handlers and Vue.js’ style binding while keeping the app responsive and visually appealing.',
+            deployment: 'https://jsharifz.github.io/Pi-Estimator-Vue/',
+            repo: 'https://github.com/Jsharifz/Pi-Estimator-Vue',
+            img: 'vuepi.png',
           },
         ],
       };
@@ -97,5 +120,16 @@
     border-radius: 15px;
 
     background-color: rgba(236, 255, 255, 0.9);
+  }
+
+  .preview img {
+    margin: auto;
+    margin-bottom: 1rem;
+
+    border: 1px solid skyblue;
+    border-radius: 10px;
+
+    max-width: 400px;
+    min-width: 300px;
   }
 </style>
