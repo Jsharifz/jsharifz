@@ -129,7 +129,6 @@
     border: 1px solid skyblue;
     border-radius: 10px;
 
-    max-width: 400px;
-    min-width: 300px;
+    width: 100%;
   }
 </style>
