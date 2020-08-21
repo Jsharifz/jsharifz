@@ -5,10 +5,7 @@
         <h3>{{ project.title }}</h3>
       </a>
       <a :href="project.deployment" target="blank" class="preview">
-        <img
-          :alt="project.title"
-          :src="'./vforimages/projects/' + project.img"
-        />
+        <img :alt="project.title" :src="'./images/projects/' + project.img" />
       </a>
       <p>{{ project.descrption }}</p>
 

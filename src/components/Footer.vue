@@ -1,17 +1,16 @@
 <template>
   <footer class="footer">
     <p>Copyright {{ date }} | Javad sharifzadeh-Najafi</p>
-    <a href="https://github.com/Jsharifz" target="_blank"
-      ><img src=".././assets/footer/github-square-brands.svg" alt=""
-    /></a>
-    <a
-      href="https://www.linkedin.com/in/javad-sharifzadeh-najafi/"
-      target="_blank"
-      ><img src=".././assets/footer/linkedin-brands.svg" alt="" />
-    </a>
-    <a href="mailto:jsharifz@outlook.com"
-      ><img src=".././assets/footer/envelope-solid.svg" alt=""
-    /></a>
+    <div id="social-media">
+      <a
+        v-for="link in footerLinks"
+        :key="link.id"
+        :href="link.href"
+        target="_blank"
+        ><img :src="'./images/footer/' + link.img" :alt="link.label" />
+        <p>{{ link.label }}</p>
+      </a>
+    </div>
   </footer>
 </template>
 
@@ -21,6 +20,23 @@
     data() {
       return {
         date: '',
+        footerLinks: [
+          {
+            label: 'Github',
+            href: 'https://github.com/Jsharifz',
+            img: 'github-square-brands.svg',
+          },
+          {
+            label: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/javad-sharifzadeh-najafi/',
+            img: 'linkedin-brands.svg',
+          },
+          {
+            label: 'E-Mail',
+            href: 'mailto:jsharifz@outlook.com',
+            img: 'envelope-solid.svg',
+          },
+        ],
       };
     },
     created() {
@@ -32,6 +48,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .footer {
+    display: flex;
+    flex-direction: column;
+
     background-color: rgba(236, 255, 255, 0.9);
     padding: 10px 0 30px 0;
   }
@@ -40,8 +59,18 @@
     padding-bottom: 1rem;
   }
 
+  #social-media {
+    display: flex;
+
+    justify-content: center;
+  }
+
+  #social-media p {
+    line-height: 0;
+  }
+
   img {
-    height: 75px;
-    margin: 0 10px;
+    height: 50px;
+    margin: 0 2rem;
   }
 </style>
