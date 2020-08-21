@@ -7,7 +7,7 @@
       <a :href="project.deployment" target="blank" class="preview">
         <img
           :alt="project.title"
-          :src="require('.././assets/projects/' + project.img)"
+          :src="'./vforimages/projects/' + project.img"
         />
       </a>
       <p>{{ project.descrption }}</p>

@@ -6,7 +6,7 @@
       :key="stack.id"
       :class="stack.class"
     >
-      <img :alt="stack.name" :src="require('.././assets/stack/' + stack.svg)" />
+      <img :alt="stack.name" :src="'./vforimages/stack/' + stack.svg" />
       <p>{{ stack.name }}</p>
     </div>
   </div>
