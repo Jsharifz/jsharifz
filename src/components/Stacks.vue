@@ -73,6 +73,16 @@
             class: 'icon-alt-1',
             svg: 'shopify_glyph.svg',
           },
+          {
+            name: 'MySQL',
+            class: 'icon-alt-2',
+            svg: 'mysql-6.svg',
+          },
+          {
+            name: 'Express',
+            class: 'icon-alt-1',
+            svg: 'expressjs.svg',
+          },
         ],
       };
     },
