@@ -25,7 +25,7 @@
           {
             title: "Company Portfolio Mockup",
             descrption:
-              "A mock informational website produced for a potential client as a form of design and concept demonstrator.",
+              "A mock informational website produced with Vue.JS for a potential client as a form of design and concept demonstrator.",
             deployment: "https://westpeak-test.herokuapp.com/",
             repo: "Private",
             img: "westpeak.png"
@@ -66,7 +66,7 @@
             img: "gallery.png"
           },
           {
-            title: "Vue.js Website Redesign: Homa Health Care Services",
+            title: "Vue.JS Website Redesign: Homa Health Care Services",
             descrption:
               "Redesigned a website that was originally built with a basic page builder. Fixed issues regarding content management, styling limitations, visual appeal, responsiveness, and implemented anti-spam into contact form.",
             deployment: "https://homa-health-care-services.herokuapp.com/",
@@ -90,9 +90,9 @@
             img: "jspi.png"
           },
           {
-            title: "Vue.js Mini App",
+            title: "Vue.JS Mini App",
             descrption:
-              "This app was produced as a learning opportunity to understand and become familiar with the Vue.js framework. Its purpose is to demonstrate event handlers and style binding while keeping the app responsive and visually appealing.",
+              "This app was produced as a learning opportunity to understand and become familiar with the Vue.JS framework. Its purpose is to demonstrate event handlers and style binding while keeping the app responsive and visually appealing.",
             deployment: "https://jsharifz.github.io/Pi-Estimator-Vue/",
             repo: "https://github.com/Jsharifz/Pi-Estimator-Vue",
             img: "vuepi.png"
